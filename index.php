@@ -44,7 +44,7 @@
 
 <?php else : ?>
 
-	<form action="/" method="post">
+	<form action="/" method="post" enctype="multipart/form-data">
 		<div>
 			<label for="nom">Nom :</label>
 		</div>
@@ -59,15 +59,25 @@
 		</div>
 		<div>
 			<label for="civilite">Civilité :</label>
-			<select name="civilite" id="civilite">
+		</div>
+		<div>
+		<select name="civilite" id="civilite">
 				<option value="Monsieur">Monsieur</option>
 				<option value="Madame">Madame</option>
 			</select>
 		</div>
 		<div>
+			<label for="fichier">Ajouter un fichier : </label>
+		</div>
+		<div>
+			<input id="fichier" type="file" name="fichier">
+		</div>
+		<div>
 			<input type="submit" value="Envoyer">
 		</div>
 	</form>
+
 <?php endif; ?>
+
 </body>
 </html>
